@@ -4,7 +4,10 @@ import com.puppycrawl.tools.checkstyle.api.Check;
 import com.puppycrawl.tools.checkstyle.api.DetailAST;
 import com.puppycrawl.tools.checkstyle.api.TokenTypes;
 
-public class CustomCheckstyleCheck extends Check {
+/**
+ * Taken from https://maven.apache.org/plugins/maven-checkstyle-plugin/examples/custom-developed-checkstyle.html
+ */
+public class MethodLimitCheck extends Check {
     private int max = 2;
 
     public int[] getDefaultTokens() {
